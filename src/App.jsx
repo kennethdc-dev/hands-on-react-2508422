@@ -1,3 +1,25 @@
+import React, { Component } from "react";
+
+// Classes
+class Welcome extends React.Component {
+  constructor(props)
+ {
+    super(props);
+ }
+ render() {
+  return (
+    <h1>Meet the <i>{this.props.name}</i></h1>
+  )
+ }
+}
+
+// Hooks
+const Welcome = (props) => {
+  return (
+    <h1>Meet the <i>{props.name}</i></h1>
+  )
+}
+
 function App() {
   const name = 'StarGazers'
   return (
@@ -5,7 +27,7 @@ function App() {
       <article>
         <hgroup>
           <img src="images/group.svg" alt="StarGazers Group" />
-          <h1>Meet the <i style={{ color: "SteelBlue" }}>{name}</i></h1>
+          <Welcome name="KennethG"/>
           <p>Members of an <b>intergalactic alliance</b><br />
             paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
           <button className="outline" onClick={() => alert('Hi there')}>Click Me</button>
